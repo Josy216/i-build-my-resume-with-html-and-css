@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock paper</title>
+    <style>
+        body{
+            background-image: linear-gradient( red, yellow, green);
+            background-repeat: no-repeat;
+            font-family: cursive;
+            font-size: 25px;
+            height: 100vh;
+            background-attachment: fixed;
+        }
+        .box1{
+            display: grid;
+            place-content: center;
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        button{
+            display: inline-block;
+            border: 1px solid blue;
+            border-radius: 50px;
+            line-height: 50px;
+        }
+        button:hover{
+            background-color: #ff7200;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="box1">     
+    <h3>Rock , Paper & Scrissor</h3>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <button onclick="
+      const rocks = document.getElementById('demo');
+      const  result= document.getElementById('demo1');
+
+      const randomnumber = Math.random();
+
+      if(randomnumber>=0 && randomnumber<=1/3){
+           rocks.innerHTML = 'Rock';
+           result.innerHTML='you pick rock, computer also pick rock so : Tie';
+      }
+    else if(randomnumber>=1/3 &&randomnumber<2/3){
+          rocks.innerHTML = 'paper';
+          result.innerHTML='you pick rock, computer pick paper so : you lose';
+      }
+     else{
+          rocks.innerHTML = 'Scrissor';
+          result.innerHTML='you pick rock, computer picked scissor so : you win!';
+      }
+      
+      ">Rock</button>
+    <button onclick="
+const paper = document.getElementById('demo');
+      const  result= document.getElementById('demo1');
+      const randomnumber = Math.random();
+
+      if(randomnumber>=0 && randomnumber<=1/3){
+           paper.innerHTML = 'Rocks';
+           result.innerHTML='you pick paper, computer pick rock so : you win';
+      }
+    else if(randomnumber>=1/3 &&randomnumber<2/3){
+          paper.innerHTML = 'paper';
+          result.innerHTML='you pick paper, computer also pick paper so : Tie';
+      }
+     else{
+          paper.innerHTML = 'Scrissor';
+          result.innerHTML='you pick paper, computer picked scissor so : you lose!';
+      }
+">Paper</button>
+
+    <button onclick="
+     const rocks = document.getElementById('demo');
+      const  result= document.getElementById('demo1');
+      const randomnumber = Math.random();
+
+      if(randomnumber>=0 && randomnumber<=1/3){
+           rocks.innerHTML = 'Rocks';
+           result.innerHTML='you pick scissor, computer pick rock so : you lose';
+      }
+    else if(randomnumber>=1/3 &&randomnumber<2/3){
+          rocks.innerHTML = 'paper';
+          result.innerHTML='you pick scissor, computer pick paper so : you win';
+      }
+     else{
+          rocks.innerHTML = 'Scrissor';
+          result.innerHTML='you pick scissor, computer also picked scissor so : Tie';
+      }
+    ">Scrissor</button>
+    
+    <button onclick="
+    const para= document.getElementById('demo');
+    const para2= document.getElementById('demo1');
+    const name = 'Joseph Teka';
+
+    let hours = Math.floor(Math.random()*24);
+    para2.innerHTML = `time is : ${hours} oclock`;
+    if(hours>=6 && hours<12){
+        para.innerHTML = `Good afternoon : ${name}`;
+    }
+     else if(hours>=1 && hours<6){
+        para.innerHTML = `Good morning : ${name}`;
+     }
+    else{
+        para.innerHTML = `Good night : ${name}`;
+    }">i am a watch</button>
+    </div>
+    <script>
+         
+    </script>
+</body>
+</html>
